@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab322b52-6b6c-433d-a5d1-3a53a36cc79f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ICP2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ICP2/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ab322b52-6b6c-433d-a5d1-3a53a36cc79f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,6 +15,7 @@
     <session id="-578224976">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -28,7 +26,7 @@
           <entry key="html" value="3" />
           <entry key="iml" value="1" />
           <entry key="js" value="6" />
-          <entry key="png" value="1" />
+          <entry key="png" value="2" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
@@ -37,7 +35,7 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="3" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="1" />
+          <entry key="Image" value="2" />
           <entry key="JavaScript" value="6" />
           <entry key="XML" value="3" />
         </counts>
@@ -58,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/PickMyFavoriteColor/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+            <state relative-caret-position="1088">
+              <caret line="64" column="31" lean-forward="true" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -131,6 +129,11 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Documentation/colorpicker_output.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -173,23 +176,6 @@
               <item name="ICP3" type="b2602c69:ProjectViewProjectNode" />
               <item name="ICP3" type="462c0819:PsiDirectoryNode" />
               <item name="Documentation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICP3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICP3" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICP3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICP3" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="GitHubUserFinder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ICP3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ICP3" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="PickMyFavoriteColor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -235,16 +221,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549670288283</updated>
-      <workItem from="1549670290385" duration="3177000" />
+      <workItem from="1549670290385" duration="3480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3177000" />
+    <option name="totallyTimeSpent" value="3480000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19395867" />
@@ -284,9 +269,6 @@
     <entry file="file://$PROJECT_DIR$/Source/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Documentation/colorpicker_output.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source/GitHubUserFinder/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -303,16 +285,6 @@
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/GitHubUserFinder/github.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -349,14 +321,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/PickMyFavoriteColor/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+        <state relative-caret-position="1088">
+          <caret line="64" column="31" lean-forward="true" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/GitHubUserFinder/github.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation/colorpicker_output.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
