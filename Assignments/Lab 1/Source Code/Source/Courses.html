@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="courseRegApp" ng-controller="courseRegCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Available Courses Page</title>
+
+    <!-- Below condition is added to maintain width and initial scale is for setting Zoom version -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Css Import -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Jquery Import for any of the function calls I LOVE YOU BABY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS Import -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Importing Angular Js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+
+    <script src="coursescript.js"></script>
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    .checked {
+        color: orange;
+    }
+
+
+     li {
+         float: left;
+     }
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: lightsalmon;
+    }
+    li.dropdown {
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+</style>
+
+<body background="images/bg.jpg">
+
+<!-- Adding Navigation Bar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <!-- To make tabs toggleable, added the data-toggle attribute -->
+            <li class="active"><a href="CourseRegistration.html" >Home</a></li>
+
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Departments</a>
+                <div class="dropdown-content">
+                    <a href="Courses.html">Computer Science</a>
+                    <a href="Courses.html">Electrical Engineering</a>
+                    <a href="Courses.html">Health Sciences</a>
+
+                </div>
+            </li>
+            </li>
+            <li class="active"><a href="About.html" >About</a></li>
+            <li class="active"><a href="Connect.html" >Connect</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+
+            <div class="navbar-header">
+                <div class="navbar-brand" id="homePage"></div>
+            </div>
+            <li style="float:right" class="dropdown"><a class="dropbtn" href="javascript:void(0)">MyAccount</a>
+                <div class="dropdown-content">
+                    <a href="CourseRegistration.html">My Orders</a>
+                    <a href="CourseRegistration.html">My Favourites</a>
+                    <a href="CourseRegistration.html">My Account Info</a>
+                </div>
+            </li>
+            <li><a ng-click="signOut()"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Header tags with Inline Styling -->
+    <div align="center" style="color: seashell">
+        <h1>Courses Available</h1>
+        <h2>Info Center</h2>
+    </div>
+    <!-- Available Courses -->
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#course1">Course I - Computer Science - React JS</a>
+                </h4>
+            </div>
+            <div id="course1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="media-body">
+                        <h4 style="color: chocolate"><u>Course I Description</u></h4>
+                        <p class="well">React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+                        </p>
+                        <hr>
+
+                        <h4 style="color: orange">Click on below URL </h4>
+                        <!-- Image, URL of the Course -->
+                        <a href="javascript:void(0)" ng-click="enrollForCourse('course1')">Web application development -React JS</a>
+                        <br/><br/>
+
+
+                                                <hr>
+                        <!-- Course 1 Other Details -->
+                        <h4 style="color: chocolate"><u>Course I Details</u></h4>
+                        <!-- Responsive Table using Bootstrap -->
+                        <div id="classTimings" class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Day & timings</th>
+                                    <th>Office Room</th>
+                                    <th>Instructor</th>
+                                    <th>Course Duration</th>
+                                    <th>Credit hours</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Mon Wed 4:30PM - 6:00PM</td>
+                                    <td>Flarsheim Hall-Rm 301</td>
+                                    <td>Rachel</td>
+                                    <td>01/20/2019 - 05/17/2019</td>
+                                    <td>3</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <hr>
+                        <h4 style="color: chocolate"><u>Course I Pre-Requisites</u></h4>
+
+
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#c1p1">HTML</button>
+                        <!-- Modal Box to show some Description of the Pre-Req -->
+                        <div class="modal fade" id="c1p1" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">COMP-SCI HTML  Credits: 3</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web</p></div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#c1p2">CSS</button>
+                        <!-- Modal Box to show some Description of the Pre-Req -->
+                        <div class="modal fade" id="c1p2" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">COMP-SCI CSS Credits: 3</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p></div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Similar Courses -->
+                        <h4 style="color: chocolate"><u>Similar Courses Online</u></h4>
+                        <a target="_blank" href="https://www.w3schools.com/tags/tag_optgroup.asp">HTML -W3 schools</a><br/>
+                        <a target="_blank" href="https://www.agitraining.com/css/training/online">CSS -Web training/online</a>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#course2">Course II - Computer Science - AWS CLOUD</a>
+                </h4>
+            </div>
+            <div id="course2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="media-body">
+                        <h4 style="color: chocolate"><u>Course II Description</u></h4>
+                        <p class="well">Amazon Web Services is a subsidiary of Amazon that provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis. The technology allows subscribers to have at their disposal a virtual cluster of computers, available all the time, through the Internet.</p>
+                        <hr>
+
+                        <h4 style="color: orange">Click on below URL </h4>
+                        <!-- Image, URL of the Course -->
+                        <a href="javascript:void(0)" ng-click="enrollForCourse('course2')">AWS Cloud</a>
+                        <br/><br/>
+
+
+
+                        <hr>
+                        <!-- Course 1 Other Details -->
+                        <h4 style="color: chocolate"><u>Course II Details</u></h4>
+                        <!-- Responsive Table using Bootstrap -->
+                        <div id="course2ClassTimings" class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Day & timings</th>
+                                    <th>Office Room</th>
+                                    <th>Instructor</th>
+                                    <th>Course Duration</th>
+                                    <th>Credit hours</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Mon Wed 10:30PM - 11:00PM</td>
+                                    <td>Royal Hall-Rm 301</td>
+                                    <td>Monica</td>
+                                    <td>01/20/2019 - 05/17/2019</td>
+                                    <td>3</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <hr>
+                        <h4 style="color: chocolate"><u>Course II Pre-Requisites</u></h4>
+
+
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#c2p1"> Cloud Computing</button>
+                        <!-- Modal Box to show some Description of the Pre-Req -->
+                        <div class="modal fade" id="c2p1" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">COMP-SCI Cloud Computing Credits: 3</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Cloud computing makes computer system resources, especially storage and computing power, available on demand without direct active management by the user. The term is generally used to describe data centers available to many users over the Internet</p></div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Similar Courses -->
+                        <h4 style="color: chocolate"><u>Similar Courses Online</u></h4>
+
+                        <a target="_blank" href="https://www.coursera.org/learn/aws-fundamentals-going-cloud-native">AWS-Coursera</a><br/>
+                        <br/>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

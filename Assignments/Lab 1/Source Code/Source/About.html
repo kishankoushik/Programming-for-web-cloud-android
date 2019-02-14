@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="courseRegApp" ng-controller="courseRegCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enroll</title>
+
+    <!-- Below condition is added to maintain width and initial scale is for setting Zoom version -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Css Import -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Jquery Import for any of the function calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS Import -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?rd5re8">
+    <!-- Importing Angular Js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+
+    <script src="coursescript.js"></script>
+
+    <style>
+        .socicons-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+        }
+        .socicons-list li {
+            margin: 30px 10px;
+        }
+        .socicons-list li a {
+            text-decoration: none;
+            padding: 30px;
+            font-size: 30px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: #f1f1f1;
+            transition: all ease-in-out 150ms;
+        }
+        .socicons-list li a:hover {
+            text-shadow: 0 5px 10px #212121;
+        }
+
+        .socicons-list li:nth-child(1) a {
+            background-color: #3e5b98;
+        }
+        .socicons-list li:nth-child(2) a {
+            background-color: #c13584;
+        }
+        .socicons-list li:nth-child(3) a {
+            background-color: #4da7de;
+        }
+        .socicons-list li:nth-child(4) a {
+            background-color: #dd4b39;
+        }
+        .socicons-list li:nth-child(5) a {
+            background-color: #1769ff;
+        }
+
+
+        li {
+            float: left;
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: lightsalmon;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .button {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body background="images/bg.jpg">
+
+<!-- Adding Navigation Bar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <!-- To make tabs toggleable, added the data-toggle attribute -->
+            <li class="active"><a href="CourseRegistration.html" >Home</a></li>
+
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Departments</a>
+                <div class="dropdown-content">
+                    <a href="CourseEnroll.html">Computer Science</a>
+                    <a href="CourseEnroll.html">Electrical Engineering</a>
+                    <a href="CourseEnroll.html">Health Sciences</a>
+
+                </div>
+            </li>
+            </li>
+            <li class="active"><a href="About.html" >About</a></li>
+            <li class="active"><a href="Connect.html" >Connect</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+
+            <div class="navbar-header">
+                <div class="navbar-brand" id="homePage"></div>
+            </div>
+            <li style="float:right" class="dropdown"><a class="dropbtn" href="javascript:void(0)">MyAccount</a>
+                <div class="dropdown-content">
+                    <a href="CourseRegistration.html">My Orders</a>
+                    <a href="CourseRegistration.html">My Favourites</a>
+                    <a href="CourseRegistration.html">My Account Info</a>
+                </div>
+            </li>
+            <li><a ng-click="signOut()"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Header tags with Inline Styling -->
+    <div align="center" style="color: seashell">
+        <h1>@About</h1>
+    </div>
+    <br/>
+
+    <div style="color: white">
+        <table>
+            <td><center><blink><h4>Educational technology is "the study and ethical practice of facilitating learning and improving performance by creating, using, and managing appropriate technological processes and resources</center><br>
+                <center>Make this possible by enrolling in to this </center></blink></h4>
+                    </td>
+        </table>
+
+    </div>
+<br>
+</div>
+<center><a href="Main.html" class="button">Online Course web app<center></center></a>
+    <div align="center" style="color: seashell">
+        <h1>@Follow on</h1>
+        <ul class="socicons-list">
+            <li>
+                <a href='https://www.facebook.com/' target='_blank'><span class="socicon-facebook"></span></a>
+            </li>
+            <li>
+                <a href='https://www.instagram.com/?hl=en' target='_blank'><span class="socicon-instagram"></span></a>
+            </li>
+            <li>
+                <a href='https://twitter.com/?lang=en' target='_blank'><span class="socicon-twitter"></span></a>
+            </li>
+            <li>
+                <a href='https://www.google.com/gmail/about/#' target='_blank'><span class="socicon-googleplus"></span></a>
+            </li>
+            <li>
+                <a href='https://www.behance.net/' target='_blank'><span class="socicon-behance"></span></a>
+            </li>
+        </ul>
+    </div>
+
+
+
+</body>
+</html>

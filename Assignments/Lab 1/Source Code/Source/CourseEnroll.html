@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="courseRegApp" ng-controller="courseRegCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enroll</title>
+
+    <!-- Below condition is added to maintain width and initial scale is for setting Zoom version -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Css Import -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Jquery Import for any of the function calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS Import -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Importing Angular Js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+
+    <script src="coursescript.js"></script>
+
+    <style>
+        li {
+            float: left;
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: lightsalmon;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body background="images/bg.jpg">
+
+<!-- Adding Navigation Bar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <!-- To make tabs toggleable, added the data-toggle attribute -->
+            <li class="active"><a href="CourseRegistration.html" >Home</a></li>
+
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Departments</a>
+                <div class="dropdown-content">
+                    <a href="CourseEnroll.html">Computer Science</a>
+                    <a href="CourseEnroll.html">Electrical Engineering</a>
+                    <a href="CourseEnroll.html">Health Sciences</a>
+
+                </div>
+            </li>
+            </li>
+            <li class="active"><a href="About.html" >About</a></li>
+            <li class="active"><a href="Connect.html" >Connect</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+
+            <div class="navbar-header">
+                <div class="navbar-brand" id="homePage"></div>
+            </div>
+            <li style="float:right" class="dropdown"><a class="dropbtn" href="javascript:void(0)">MyAccount</a>
+                <div class="dropdown-content">
+                    <a href="CourseRegistration.html">My Orders</a>
+                    <a href="CourseRegistration.html">My Favourites</a>
+                    <a href="CourseRegistration.html">My Account Info</a>
+                </div>
+            </li>
+            <li><a ng-click="signOut()"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Header tags with Inline Styling -->
+    <div align="center" style="color: seashell">
+    <h1>Course Enrollement</h1>
+    <h2>Info Center</h2>
+</div>
+    <br/>
+
+<div id="enrollCourse1">
+
+    <h4 style="color: seashell"><u>Web Application Development-React JS</u></h4>
+
+    <!-- Responsive Table using Bootstrap -->
+    <div id="course1Timings" class="table-responsive" style="background-color: seashell">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Day & timings</th>
+                <th>Room</th>
+                <th>Instructor</th>
+                <th>Meeting Dates</th>
+                <th>Credit hours</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Mon Wed 2:30PM - 5:00PM</td>
+                <td>Flarsheim Hall-Rm 101</td>
+                <td>Rachel</td>
+                <td>08/13/2018 - 11/11/2018</td>
+                <td>3</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    <!-- Available, Total Seats iteration from the List in Script -->
+    <div ng-repeat="x in availableSeats" align="center" style="background-color: orange">
+        <strong ng-bind="x.text"></strong> :
+        <span ng-bind="x.seats"></span>
+    </div>
+    <br/>
+
+    <!-- Enroll, Drop Button -->
+    <button id="course1Enroll" type="button" class="btn btn-primary center-block" ng-click="enrollOrDrop($event)">Enroll</button>
+    <br/>
+    <!-- Success Message -->
+    <p align="center" style="color: skyblue"><strong id="successEnrolling"></strong></p>
+
+</div>
+</div>
+
+</body>
+</html>
