@@ -54,7 +54,7 @@ app.controller('courseRegCtrl', function($scope) {
             // Changing the button text to Enroll
             $("#course1Enroll").text('Enroll');
         }
-    };
+    };.
 
 });
 
