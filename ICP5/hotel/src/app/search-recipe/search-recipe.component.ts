@@ -86,6 +86,8 @@ export class SearchRecipeComponent implements OnInit {
 
 
 
+    /*Request to the 4 square API*/
+
     if (this.placeValue != null && this.placeValue != "" && this.recipeValue != null && this.recipeValue != "") {
       this._http.get("https://api.foursquare.com/v2/venues/search" +
         "?client_id=3PPNMTIKJJNDVYPFOBGSHHV2PR5A2P05PYHXDN2MKSKTTBSX" +

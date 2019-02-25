@@ -1,18 +1,18 @@
 <div class="parent-container">
-  <div class="child-container">
-    <h2><b>Search for your recipe!!
-    </b></h2><br>
+  <div class="child-container"><br><br><br><br><br><br><br>
+    <h1 style="color: darkgreen"><b>Search for your favourite food
+    </b></h1><br>
     <form>
       <div class="form-group">
         <div class="form-group col-lg-6 col-lg-offset-3 input-group">
           <input type="text" class="form-control" placeholder="Recipe name" #recipe>
-          <span class="input-group-addon">-</span>
+          <span class="input-group-addon"></span><br>
           <input type="text" class="form-control" placeholder="Place" #place>
-          <span class="input-group-addon">-</span>
+          <span class="input-group-addon"></span>
 
         </div><br>
-        <button type="button" class="btn btn primary col-lg-2 col-lg-offset-4 " (click)="getVenues()">Go</button>
-        <button type="button" class="btn btn primary col-lg-2 col-lg-offset-1 " (click)="getInit()">Near Me</button><br>
+        <button type="button" class="button" (click)="getVenues()">Go</button>
+        <button type="button" class="button" (click)="getInit()">Near Me</button><br>
 
       </div>
     </form>
@@ -23,18 +23,18 @@
 
     <div class="col-9 offset-1">
       <div class="panel panel-default col-6">
-        <div class="panel-heading"><b>Where to get</b></div>
-        <div class="panel-body">
+        <div class="panel-heading" align="center"><b>Where to get</b></div>
+        <div class="panel-body" align="center">
 
-          <div *ngFor="let venue of venueList" class="list-group-item clearfix">
+          <div *ngFor="let venue of venueList" class="list-group-item clearfix">/* data being output in frontend*/
             <div class="pull-left">
               <h4 class="list-group-item-heading">{{ venue.name }}</h4>
             </div>
 
-            <span class="pull-right">
+            <span class="pull-right">/*Api call to google maps for location */
              <a href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}
              &daddr={{venue.location.formattedAddress[0]}},{{venue.location.formattedAddress[1]}},{{venue.location.formattedAddress[2]}}">
-               <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
+               <img src="https://cdn4.iconfinder.com/data/icons/maps-and-navigation-solid-icons-vol-3/72/131-512.png" style="width: 30px; height: 30px;"></a>
       </span>
 
           </div>
