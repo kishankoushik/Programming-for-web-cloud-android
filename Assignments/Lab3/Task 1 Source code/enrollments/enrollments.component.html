@@ -1,0 +1,28 @@
+<div style="background:white; min-height:730px;">
+  <user-template></user-template>
+  <br>
+  <div class="container" >
+	  <div class="row">
+	  <h2 style="display:inline" class="offset-3 col-5">My Enrollments</h2>
+	  <a routerLink="" class="lbutton btn btn-primary" ><i style="font-size: 32px" class="fa fa-lg fa-sign-out"></i></a>
+	  </div>
+	  <div style="background-color: white;margin-top: 2%;padding-top: 2%;padding-bottom: 1%;min-height: 600px" class="offset-3 col-6">
+
+              <div *ngFor="let enrollment of my_enrollments" class="col-12" id="enrollment.BookID">
+                  <h3 style="color: darkorange;display: inline">{{enrollment.name}}</h3>
+                  <button (click)="delete(enrollment.BookID,enrollment.ind)"  style="position: absolute;float: right;right: 0px" class="col-2 lbutton btn btn-sm btn-danger"><i class="fa fa-lg fa-trash"></i></button>
+
+
+                  <div>
+                      <h5 style="display: inline"> Professor:</h5> {{enrollment.Professor}}
+                  </div>
+                  <div>
+                      <h5 style="display: inline"> Availability: </h5>{{enrollment.availability}}
+                  </div>
+                  <div> <h5 style="display: inline" > Rating: </h5> {{enrollment.rating}}
+                  </div>
+              </div>
+  </div>
+  </div>
+
+</div>

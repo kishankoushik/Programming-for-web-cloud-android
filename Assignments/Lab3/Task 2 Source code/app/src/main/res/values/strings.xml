@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">kishanapp</string>
+    <string name="facebook_app_id">835406696822994</string>
+    <string name="fb_login_protocol_scheme">fb835406696822994</string>
+    <string name="title_activity_main2">UserProfile</string>
+</resources>
